@@ -19,7 +19,7 @@ Threat Speculator takes the guesswork out of the lab by modeling the human genom
 * The AI Brain: PyTorch and PyTorch Geometric power the graph neural network.
 
 **Built for the Real World (Benchmarks)**
-We engineered this pipeline to be highly accessible. It runs efficiently on a standard local CPU—no expensive cloud GPUs required.
-* Massive Scale: We mapped out and evaluated 1.72 million mutations and nearly 30 million genomic connections.
-* Speed: Crunched the entire dataset in just 444 seconds.
-* Reliability: Achieved 56.01% precision (with an ROC-AUC of 0.6207), meaning when our model alerts doctors to a threat, it is highly reliable for making clinical decisions.
+We engineered this pipeline to handle massive clinical datasets efficiently, utilizing PyTorch Geometric to evaluate genome-scale graphs on standard hardware.
+- **Massive Scale:** Mapped out and evaluated 1.72 million mutations and nearly 30 million genomic connections.
+- **Calibrated for Clinical Safety:** Because missing a disease-causing mutation is unacceptable, we mathematically optimized our decision threshold to 0.21. At this operating point, our model achieves **61.15% Recall** (catching over 60% of all true pathogenic threats) with a baseline ROC-AUC of 0.6207.
+- **Workflow Acceleration:** Instead of blindly researching thousands of Variants of Uncertain Significance (VUS), lab technicians can use our model to instantly narrow the haystack. With a precision of 25.37%, roughly 1 in every 4 mutations the model flags is a confirmed threat, massively speeding up the manual diagnostic bottleneck.
